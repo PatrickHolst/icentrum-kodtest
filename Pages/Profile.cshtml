@@ -1,0 +1,19 @@
+﻿@page
+@model icentrum_kodtest.Pages.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <p class="text-danger">@Model.ErrorMessage</p>
+}
+else if (!string.IsNullOrEmpty(Model.Image))
+{
+    <div class="container mb-4 text-center">
+        <img src="data:image/jpeg;base64,@Model.Image"
+             width="550px"
+             height="150px" />
+    </div>
+    
+}
